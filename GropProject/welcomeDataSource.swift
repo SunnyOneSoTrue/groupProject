@@ -13,7 +13,9 @@ class WelcomeDataSource: CollectionDataSource {
     var collectionView: UICollectionView!
     
     init(with collectionView: UICollectionView) {
+        super.init()
         self.collectionView = collectionView
+        self.configCollectionView()
     }
     
     func configCollectionView() {
@@ -22,6 +24,8 @@ class WelcomeDataSource: CollectionDataSource {
         
         let nib = UINib(nibName: "welcomeCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "welcomeCell")
+        
+        collectionView.isPagingEnabled = true
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -32,8 +36,8 @@ class WelcomeDataSource: CollectionDataSource {
         return UICollectionViewCell()
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        <#code#>
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+    }
 }
 

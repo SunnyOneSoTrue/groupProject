@@ -11,6 +11,7 @@ class WelcomeController: UIViewController {
 
     
     @IBOutlet weak var collectView: UICollectionView!
+    private var collectionDataSource: WelcomeDataSource?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
@@ -18,7 +19,7 @@ class WelcomeController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        collectionDataSource = WelcomeDataSource(with: collectView)
     }
 }
 
