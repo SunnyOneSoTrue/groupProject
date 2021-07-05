@@ -19,10 +19,16 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="auW-wy-ovi">
                         <rect key="frame" x="0.0" y="0.0" width="506" height="421"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUS-uP-Yok">
-                        <rect key="frame" x="96" y="212" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUS-uP-Yok">
+                        <rect key="frame" x="20" y="238" width="343" height="163"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="163" id="Ley-CL-1Ed"/>
+                            <constraint firstAttribute="width" constant="343" id="V9o-iR-CkG"/>
+                        </constraints>
+                        <string key="text">The Future of
+Photography
+&amp; Unsplash</string>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="0.0"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -31,6 +37,8 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="auW-wy-ovi" secondAttribute="bottom" id="Be4-hc-xX3"/>
+                <constraint firstItem="nUS-uP-Yok" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="UMF-ji-sCj"/>
+                <constraint firstAttribute="bottom" secondItem="nUS-uP-Yok" secondAttribute="bottom" constant="20" id="WBz-b2-Jht"/>
                 <constraint firstItem="auW-wy-ovi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="c0b-bQ-fJh"/>
                 <constraint firstAttribute="trailing" secondItem="auW-wy-ovi" secondAttribute="trailing" id="lM5-Zw-dYz"/>
                 <constraint firstItem="auW-wy-ovi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zKq-pm-LFf"/>

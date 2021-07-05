@@ -12,6 +12,7 @@ class welcomeCell: UICollectionViewCell {
     @IBOutlet weak var imgView: UIImageView!
     var imageView: UIImageView?
     var image: UIImage?
+    var text: String?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,11 +22,28 @@ class welcomeCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         guard let image = image else { return }
+        guard let text = text else { return }
+        
         imageView = UIImageView()
         imageView!.frame = bounds
         imageView!.image = image
         addSubview(imageView!)
         setUpImageGradient()
+
+        //translatesAutoresizingMaskIntoConstraints = false
+        let frame = CGRect(x: 20,
+                           y: 300,
+                           width: 343,
+                           height: 163)
+        
+        let font = UIFont(name: "Helvetica Neue", size: 40)
+        let label = UILabel(frame: frame)
+        label.text = text
+        label.font = font
+        label.textColor = .white
+        label.numberOfLines = 3
+
+        imageView!.addSubview(label)  
     }
     
     func setUpImageGradient() {

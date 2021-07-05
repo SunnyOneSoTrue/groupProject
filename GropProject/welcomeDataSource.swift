@@ -31,6 +31,17 @@ class WelcomeDataSource: CollectionDataSource {
     
     func goToNextPage() {
         //collectionView.scro
+        let currentPage = pageControl.currentPage
+        //collectionView.scrollToItem(at: <#T##IndexPath#>, at: ., animated: <#T##Bool#>)
+    }
+    
+    func scrollToNextItem() {
+        let contentOffset = CGFloat(floor(collectionView.contentOffset.x + collectionView.bounds.size.width))
+        self.moveToFrame(contentOffset: contentOffset)
+    }
+    
+    func moveToFrame(contentOffset : CGFloat) {
+        collectionView.setContentOffset(CGPoint(x: contentOffset, y: collectionView.contentOffset.y), animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

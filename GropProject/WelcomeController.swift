@@ -28,6 +28,7 @@ class WelcomeController: UIViewController {
     
     
     @IBAction func onNext(_ sender: Any) {
+        collectionDataSource?.scrollToNextItem()
     }
     
 }
