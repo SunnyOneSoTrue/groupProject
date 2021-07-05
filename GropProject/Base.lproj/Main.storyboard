@@ -29,7 +29,7 @@
                                 </state>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1KQ-kh-aHB">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FM2-Hz-R9R">
                                     <size key="itemSize" width="128" height="128"/>
@@ -52,9 +52,9 @@
                         <viewLayoutGuide key="safeArea" id="0wF-XO-Sea"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0wF-XO-Sea" firstAttribute="bottom" secondItem="1KQ-kh-aHB" secondAttribute="bottom" id="03A-fa-p12"/>
+                            <constraint firstAttribute="bottom" secondItem="1KQ-kh-aHB" secondAttribute="bottom" id="03A-fa-p12"/>
                             <constraint firstItem="0wF-XO-Sea" firstAttribute="trailing" secondItem="1KQ-kh-aHB" secondAttribute="trailing" id="1rT-Ze-yE0"/>
-                            <constraint firstItem="1KQ-kh-aHB" firstAttribute="top" secondItem="0wF-XO-Sea" secondAttribute="top" id="VD6-FM-XFL"/>
+                            <constraint firstItem="1KQ-kh-aHB" firstAttribute="top" secondItem="6RE-Gn-ZLw" secondAttribute="top" id="VD6-FM-XFL"/>
                             <constraint firstItem="nHE-m9-2iH" firstAttribute="top" secondItem="0wF-XO-Sea" secondAttribute="top" constant="20" id="VFY-Y4-He2"/>
                             <constraint firstItem="1KQ-kh-aHB" firstAttribute="leading" secondItem="0wF-XO-Sea" secondAttribute="leading" id="dMP-mk-dsh"/>
                             <constraint firstItem="0wF-XO-Sea" firstAttribute="trailing" secondItem="nHE-m9-2iH" secondAttribute="trailing" constant="20" id="hQR-vb-Vk5"/>

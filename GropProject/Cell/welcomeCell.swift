@@ -10,6 +10,8 @@ import UIKit
 class welcomeCell: UICollectionViewCell {
     
     @IBOutlet weak var imgView: UIImageView!
+    var imageView: UIImageView?
+    var image: UIImage?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,8 +20,10 @@ class welcomeCell: UICollectionViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        
+        guard let image = image else { return }
+        imageView = UIImageView()
+        imageView!.frame = bounds
+        imageView!.image = image
+        addSubview(imageView!)
     }
-
 }
