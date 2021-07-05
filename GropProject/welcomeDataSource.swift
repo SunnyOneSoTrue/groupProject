@@ -51,6 +51,7 @@ class WelcomeDataSource: CollectionDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "welcomeCell", for: indexPath) as? welcomeCell
         cell!.image = UIImage(named: "testImage")
+        cell!.text = "The Future of Photography & Unsplash"
         return cell!
     }
     

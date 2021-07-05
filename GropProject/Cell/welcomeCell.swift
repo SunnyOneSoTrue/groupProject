@@ -13,24 +13,9 @@ class welcomeCell: UICollectionViewCell {
     var imageView: UIImageView?
     var image: UIImage?
     var text: String?
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        guard let image = image else { return }
-        guard let text = text else { return }
-        
-        imageView = UIImageView()
-        imageView!.frame = bounds
-        imageView!.image = image
-        addSubview(imageView!)
-        setUpImageGradient()
-
-        //translatesAutoresizingMaskIntoConstraints = false
+    
+    var textLabel: UILabel {
+        guard let text = text else { return UILabel() }
         let frame = CGRect(x: 20,
                            y: 300,
                            width: 343,
@@ -42,8 +27,27 @@ class welcomeCell: UICollectionViewCell {
         label.font = font
         label.textColor = .white
         label.numberOfLines = 3
+        
+        return label
+    }
 
-        imageView!.addSubview(label)  
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        guard let image = image else { return }
+        //guard let text = text else { return }
+        
+        imageView = UIImageView()
+        imageView!.frame = bounds
+        imageView!.image = image
+        addSubview(imageView!)
+        setUpImageGradient()
+
+        imageView!.addSubview(textLabel)
     }
     
     func setUpImageGradient() {
