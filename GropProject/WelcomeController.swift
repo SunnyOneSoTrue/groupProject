@@ -7,13 +7,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WelcomeController: UIViewController {
+
+    
+    @IBOutlet weak var collectView: UICollectionView!
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
 
