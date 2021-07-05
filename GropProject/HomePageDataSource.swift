@@ -12,10 +12,11 @@ class HomePageDataSource : NSObject, UITableViewDataSource {
     
     
     private var tableView : UITableView!
+    private var viewModel : HomePageViewModelProtocol!
     
     var content = [String]()
     
-    init (with tableview: UITableView) {
+    init (with tableview: UITableView, viewModel:HomePageViewModelProtocol ) {
         self.tableView  =  tableview
     }
     

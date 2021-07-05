@@ -13,7 +13,11 @@ protocol HomePageViewModelProtocol : AnyObject {
 
 final class HomepageViewModel : HomePageViewModelProtocol {
     
+    var controller : CoordinatorDelegate
     
+    init(with controller: CoordinatorDelegate) {
+        self.controller = controller
+    }
     
     
     

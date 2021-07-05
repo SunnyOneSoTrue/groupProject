@@ -8,12 +8,23 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
-
+    
+    
+    @IBOutlet var profileImageView: UIImageView!
+    @IBOutlet var mainImage: UIImageView!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var articleTittle: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        
     }
 
-    
+    func configure (with: ) {
+        
+    }
     
 }
