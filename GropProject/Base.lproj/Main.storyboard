@@ -48,20 +48,64 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Znf-mo-Jt1">
+                                <rect key="frame" x="272" y="757.5" width="122" height="28"/>
+                                <color key="currentPageIndicatorTintColor" red="0.96862745100000003" green="0.090196078430000007" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXS-kQ-py3">
+                                <rect key="frame" x="265.5" y="805.5" width="128.5" height="36.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128.52000000000001" id="GAg-Uz-Vfz"/>
+                                    <constraint firstAttribute="height" constant="36.520000000000003" id="meq-Uu-Rl4"/>
+                                </constraints>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onNext:" destination="mCx-09-C7R" eventType="touchUpInside" id="2DW-BT-Pnp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaJ-Db-CRl">
+                                <rect key="frame" x="328" y="64" width="66" height="17"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.090196078430000007" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="4eb-aU-QUq"/>
+                                    <constraint firstAttribute="height" constant="17" id="d9I-ZY-gxt"/>
+                                </constraints>
+                                <state key="normal" title="SKIP">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onSkip:" destination="mCx-09-C7R" eventType="touchUpInside" id="lmW-Wp-NY4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0wF-XO-Sea"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="1KQ-kh-aHB" secondAttribute="bottom" id="03A-fa-p12"/>
                             <constraint firstItem="0wF-XO-Sea" firstAttribute="trailing" secondItem="1KQ-kh-aHB" secondAttribute="trailing" id="1rT-Ze-yE0"/>
+                            <constraint firstItem="0wF-XO-Sea" firstAttribute="trailing" secondItem="GaJ-Db-CRl" secondAttribute="trailing" constant="20" id="Nga-VR-aGN"/>
+                            <constraint firstItem="IXS-kQ-py3" firstAttribute="top" secondItem="Znf-mo-Jt1" secondAttribute="bottom" constant="20" id="Rep-8M-Qyr"/>
+                            <constraint firstItem="GaJ-Db-CRl" firstAttribute="top" secondItem="0wF-XO-Sea" secondAttribute="top" constant="20" id="Uvi-t4-6IG"/>
                             <constraint firstItem="1KQ-kh-aHB" firstAttribute="top" secondItem="6RE-Gn-ZLw" secondAttribute="top" id="VD6-FM-XFL"/>
                             <constraint firstItem="nHE-m9-2iH" firstAttribute="top" secondItem="0wF-XO-Sea" secondAttribute="top" constant="20" id="VFY-Y4-He2"/>
+                            <constraint firstItem="0wF-XO-Sea" firstAttribute="trailing" secondItem="Znf-mo-Jt1" secondAttribute="trailing" constant="20" id="VPt-sa-xal"/>
+                            <constraint firstItem="0wF-XO-Sea" firstAttribute="bottom" secondItem="IXS-kQ-py3" secondAttribute="bottom" constant="20" id="ZTx-Kb-sqJ"/>
+                            <constraint firstItem="0wF-XO-Sea" firstAttribute="trailing" secondItem="IXS-kQ-py3" secondAttribute="trailing" constant="20" id="are-C4-ImJ"/>
                             <constraint firstItem="1KQ-kh-aHB" firstAttribute="leading" secondItem="0wF-XO-Sea" secondAttribute="leading" id="dMP-mk-dsh"/>
                             <constraint firstItem="0wF-XO-Sea" firstAttribute="trailing" secondItem="nHE-m9-2iH" secondAttribute="trailing" constant="20" id="hQR-vb-Vk5"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectView" destination="1KQ-kh-aHB" id="iw2-Zq-LDW"/>
+                        <outlet property="pageControl" destination="Znf-mo-Jt1" id="B2d-m9-8n3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhl-7c-inV" sceneMemberID="firstResponder"/>

@@ -29,6 +29,10 @@ class WelcomeDataSource: CollectionDataSource {
         collectionView.isPagingEnabled = true
     }
     
+    func goToNextPage() {
+        //collectionView.scro
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         3
     }
