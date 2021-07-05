@@ -13,6 +13,15 @@
 		CE77261C2692DA8900237EE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE77261A2692DA8900237EE0 /* Main.storyboard */; };
 		CE77261E2692DA8C00237EE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE77261D2692DA8C00237EE0 /* Assets.xcassets */; };
 		CE7726212692DA8C00237EE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE77261F2692DA8C00237EE0 /* LaunchScreen.storyboard */; };
+		F131AC632692E43100397FEE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F131AC522692E43000397FEE /* BaseViewController.swift */; };
+		F131AC642692E43100397FEE /* WelcomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F131AC552692E43100397FEE /* WelcomeManager.swift */; };
+		F131AC652692E43100397FEE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F131AC572692E43100397FEE /* AppCoordinator.swift */; };
+		F131AC662692E43100397FEE /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = F131AC582692E43100397FEE /* Storyboarded.swift */; };
+		F131AC672692E43100397FEE /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F131AC592692E43100397FEE /* CoordinatorDelegate.swift */; };
+		F131AC682692E43100397FEE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F131AC5B2692E43100397FEE /* NetworkManager.swift */; };
+		F131AC692692E43100397FEE /* WelcomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F131AC5E2692E43100397FEE /* WelcomeModel.swift */; };
+		F131AC6A2692E43100397FEE /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F131AC602692E43100397FEE /* FeedModel.swift */; };
+		F131AC6B2692E43100397FEE /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F131AC622692E43100397FEE /* FeedManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		CE77261D2692DA8C00237EE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE7726202692DA8C00237EE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE7726222692DA8C00237EE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F131AC522692E43000397FEE /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F131AC552692E43100397FEE /* WelcomeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeManager.swift; sourceTree = "<group>"; };
+		F131AC572692E43100397FEE /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F131AC582692E43100397FEE /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		F131AC592692E43100397FEE /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
+		F131AC5B2692E43100397FEE /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F131AC5E2692E43100397FEE /* WelcomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeModel.swift; sourceTree = "<group>"; };
+		F131AC602692E43100397FEE /* FeedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		F131AC622692E43100397FEE /* FeedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,8 @@
 		CE7726132692DA8900237EE0 /* GropProject */ = {
 			isa = PBXGroup;
 			children = (
+				F131AC512692E43000397FEE /* BaseViewController */,
+				F131AC532692E43100397FEE /* Infrastructure */,
 				CE7726142692DA8900237EE0 /* AppDelegate.swift */,
 				CE7726162692DA8900237EE0 /* SceneDelegate.swift */,
 				CE7726182692DA8900237EE0 /* ViewController.swift */,
@@ -65,6 +85,85 @@
 				CE7726222692DA8C00237EE0 /* Info.plist */,
 			);
 			path = GropProject;
+			sourceTree = "<group>";
+		};
+		F131AC512692E43000397FEE /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F131AC522692E43000397FEE /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		F131AC532692E43100397FEE /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				F131AC542692E43100397FEE /* WelcomeAPI */,
+				F131AC562692E43100397FEE /* Coordinator */,
+				F131AC5A2692E43100397FEE /* NetworkManager */,
+				F131AC5C2692E43100397FEE /* Models */,
+				F131AC612692E43100397FEE /* FeedAPI */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		F131AC542692E43100397FEE /* WelcomeAPI */ = {
+			isa = PBXGroup;
+			children = (
+				F131AC552692E43100397FEE /* WelcomeManager.swift */,
+			);
+			path = WelcomeAPI;
+			sourceTree = "<group>";
+		};
+		F131AC562692E43100397FEE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F131AC572692E43100397FEE /* AppCoordinator.swift */,
+				F131AC582692E43100397FEE /* Storyboarded.swift */,
+				F131AC592692E43100397FEE /* CoordinatorDelegate.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F131AC5A2692E43100397FEE /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				F131AC5B2692E43100397FEE /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		F131AC5C2692E43100397FEE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F131AC5D2692E43100397FEE /* WelcomeModel */,
+				F131AC5F2692E43100397FEE /* FeedModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F131AC5D2692E43100397FEE /* WelcomeModel */ = {
+			isa = PBXGroup;
+			children = (
+				F131AC5E2692E43100397FEE /* WelcomeModel.swift */,
+			);
+			path = WelcomeModel;
+			sourceTree = "<group>";
+		};
+		F131AC5F2692E43100397FEE /* FeedModel */ = {
+			isa = PBXGroup;
+			children = (
+				F131AC602692E43100397FEE /* FeedModel.swift */,
+			);
+			path = FeedModel;
+			sourceTree = "<group>";
+		};
+		F131AC612692E43100397FEE /* FeedAPI */ = {
+			isa = PBXGroup;
+			children = (
+				F131AC622692E43100397FEE /* FeedManager.swift */,
+			);
+			path = FeedAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +236,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F131AC682692E43100397FEE /* NetworkManager.swift in Sources */,
+				F131AC652692E43100397FEE /* AppCoordinator.swift in Sources */,
 				CE7726192692DA8900237EE0 /* ViewController.swift in Sources */,
+				F131AC6B2692E43100397FEE /* FeedManager.swift in Sources */,
+				F131AC632692E43100397FEE /* BaseViewController.swift in Sources */,
+				F131AC692692E43100397FEE /* WelcomeModel.swift in Sources */,
+				F131AC672692E43100397FEE /* CoordinatorDelegate.swift in Sources */,
+				F131AC642692E43100397FEE /* WelcomeManager.swift in Sources */,
 				CE7726152692DA8900237EE0 /* AppDelegate.swift in Sources */,
 				CE7726172692DA8900237EE0 /* SceneDelegate.swift in Sources */,
+				F131AC662692E43100397FEE /* Storyboarded.swift in Sources */,
+				F131AC6A2692E43100397FEE /* FeedModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
